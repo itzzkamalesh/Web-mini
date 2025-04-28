@@ -23,7 +23,7 @@ PICS = (environ.get('PICS', 'https://bit.ly/3FIhFd3')).split()
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5983189506').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '2001653136').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL', '')
@@ -40,7 +40,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002037384930'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'search_zone_support')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
-IMDB = is_enabled((environ.get('IMDB', "True")), True)
+IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "ɴᴀᴍᴇ: <code>{file_name}</code> \n\nᴊᴏɪɴ ɴᴏᴡ: [GreyMatter's Bot](https://t.me/greymatter_bots)</b>")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "ɴᴀᴍᴇ: <code>{file_name}</code> \n\nᴊᴏɪɴ ɴᴏᴡ: [GreyMatter's Bot](https://t.me/greymatter_bots)</b>")
@@ -79,10 +79,10 @@ if SELF_DELETE == "True":
 
     # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "📥 HOW TO DOWNLOAD 📥"
-DOWNLOAD_TEXT_URL = "https://omegalinks.in/ref/GreyMatter6458"
+DOWNLOAD_TEXT_URL = "https://t.me/tamil_movie_linkz"
 
    # Custom Caption Under Button #
-CAPTION_BUTTON = "Subscribe"
-CAPTION_BUTTON_URL = "https://youtube.com/@GreyMattersYT"
+CAPTION_BUTTON = "⚡️ Jᴏɪɴ @Tamil_Mini ❤️"
+CAPTION_BUTTON_URL = "https://t.me/tamil_mini"
 
    # Auto Delete For Bot Sending Files #
